@@ -3,10 +3,10 @@
 
 import random
 
-encryptStr = 'shhhUsshh'
-decryptStr = '31141.21061.21061.21061.14092.31141.31141.21061.21061.'
-encryptKey = 'test'
-decryptKey = 'test'
+encryptStr = '<enter something>'
+decryptStr = '3416.7634.10845.15924.7634.7843.24192.23788.30568.16011.7634.15924.17931.16747.10845.4484.24440.'
+encryptKey = 'super secret key'
+decryptKey = 'super secret key'
 
 
 def RN0(key, symbol) -> str:
@@ -30,7 +30,8 @@ def encrypt(encryptStr, key) -> str:
         'u': RN0(key, 'u'), 'v': RN0(key, 'v'), 'w': RN0(key, 'w'), 'x': RN0(key, 'x'), 'y': RN0(key, 'y'),
         'z': RN0(key, 'z'), '1': RN0(key, '1'), '2': RN0(key, '2'), '3': RN0(key, '3'), '4': RN0(key, '4'), 
         '5': RN0(key, '5'), '6': RN0(key, '6'), '7': RN0(key, '7'), '8': RN0(key, '8'), '9': RN0(key, '9'), 
-        '0': RN0(key, '0'), ' ': RN0(key, '/'), 
+        '0': RN0(key, '0'), ' ': RN0(key, '/'), '?': RN0(key, '?'), '!': RN0(key, '!'), '<': RN0(key, '<'),
+        '>': RN0(key, '>'), ',': RN0(key, ','), '.': RN0(key, '.'), ':': RN0(key, ':')
     }
     encryptedStr = ''
     for letter in encryptStr:
@@ -46,7 +47,8 @@ def decrypt(encryptedStr, key) -> str:
         RN1(key, 'u'): 'u', RN1(key, 'v'): 'v', RN1(key, 'w'): 'w', RN1(key, 'x'): 'x', RN1(key, 'y'): 'y',
         RN1(key, 'z'): 'z', RN1(key, '1'): '1', RN1(key, '2'): '2', RN1(key, '3'): '3', RN1(key, '4'): '4',
         RN1(key, '5'): '5', RN1(key, '6'): '6', RN1(key, '7'): '7', RN1(key, '8'): '8', RN1(key, '9'): '9',
-        RN1(key, '0'): '0', RN1(key, '/'): ' '
+        RN1(key, '0'): '0', RN1(key, '/'): ' ', RN1(key, '?'): '?', RN1(key, '!'): '!', RN1(key, '<'): '<',
+        RN1(key, '>'): '>', RN1(key, ','): ',', RN1(key, '.'): '.', RN1(key, ':'): ':'
     }
     decrypted = ''
     test = encryptedStr.rstrip('.').split('.')
