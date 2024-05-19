@@ -3,11 +3,10 @@
 
 import random
 
-encryptStr = '<enter something>'
-decryptStr = '3416.7634.10845.15924.7634.7843.24192.23788.30568.16011.7634.15924.17931.16747.10845.4484.24440.'
-encryptKey = 'super secret key'
-decryptKey = 'super secret key'
-
+encryptStr = 'hello'
+decryptStr = '27596.21161.10762.10762.31989.'
+encryptKey = 'hello'
+decryptKey = 'hello'
 
 def RN0(key, symbol) -> str:
     random.seed(key + symbol)
