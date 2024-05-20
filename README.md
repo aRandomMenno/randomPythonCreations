@@ -1,4 +1,4 @@
 
-# randomPythonCreations
+# allTheThingsPython
 
-To this repo I will upload some Python scripts I have created over the years. :zap:
+In this repo there will be random Python files I have.
